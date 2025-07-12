@@ -11,7 +11,7 @@
         <!-- Google Web Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet">
 
         <!-- Icon Font Stylesheet -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
@@ -32,82 +32,33 @@
     <body>
 
         <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-secondary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+        <!-- Spinner Start -->
         <!-- Topbar Start -->
         <!-- Navbar & Hero Start -->
-      @include('front-end.header')
+      @include('layouts.header')
         <!-- Navbar & Hero End -->
-             <!-- Spinner End -->
-               <!-- Topbar End -->
+        <!-- Spinner End -->
+        <!-- Topbar End -->
 
 
-        <!-- Carousel Start -->
-       @include('front-end.carousel')
-        <!-- Carousel End -->
-
-
-        <!-- Modal Search Start -->
-       @include('front-end.model-search')
-        <!-- Modal Search End -->
-
-
-
-        <!-- About Start -->
-      @include('front-end.about')
-        <!-- About End -->
-
-
-        <!-- Counter Facts Start -->
-    @include('front-end.facts')
-        <!-- Counter Facts End -->
-
-
-        <!-- Services Start -->
-       @include('front-end.service')
-        <!-- Services End -->
-
-
-
-        <!-- Features Start -->
-      @include('front-end.feature')
-        <!-- Features End -->
-
-
-
-        <!-- Countries We Offer Start -->
-       @include('front-end.countries')
-        <!-- Countries We Offer End -->
-
-
-        <!-- Testimonial Start -->
-       @include('front-end.testimonial')
-        <!-- Testimonial End -->
-
-
-
-        <!-- Training Start -->
-      @include('front-end.training')
-        <!-- Training End -->
-
-
-        <!-- Contact Start -->
-       @include('front-end.contact')
-        <!-- Contact End -->
-
+        @yield('content')
 
         <!-- Footer Start -->
-      @include('front-end.footer')
+      @include('layouts.footer')
         <!-- Footer End -->
-
-        
-        <!-- Copyright Start -->
-      @include('front-end.copyright')
-        <!-- Copyright End -->
 
 
         <!-- Back to Top -->
-        <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
+        <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>
 
-        
+
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -116,7 +67,7 @@
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    
+
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
